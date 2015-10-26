@@ -16,8 +16,8 @@
 def triangle(a, b, c)
   if (a <= 0) || (b <= 0) || (c <= 0)
     raise TriangleError, "Can't have 0 or a negative side length."
-  elsif (a^2) + (b^2) != (c^2) && (a^2) + (c^2) != (b^2)|| (c^2) + (b^2) != (a^2)
-    raise TriangleError, "this can't exist b/c pythagoras"
+  elsif a+b <= c || a+c <= b || c+b <= a
+    raise TriangleError, "this can't exist b/c it's too weird"
   end
   if a == b
   	if a == c
