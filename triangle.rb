@@ -14,7 +14,24 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  if (a <= 0) || (b <= 0) || (c <= 0)
+    raise TriangleError, "Can't have 0 or a negative side length."
+  elsif (a^2) + (b^2) != (c^2) && (a^2) + (c^2) != (b^2)|| (c^2) + (b^2) != (a^2)
+    raise TriangleError, "this can't exist b/c pythagoras"
+  end
+  if a == b
+  	if a == c
+  		return :equilateral
+  	else
+  		return :isosceles
+  	end
+  elsif a == c
+  	return :isosceles
+  elsif b == c
+  	return :isosceles
+  else
+  	return :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
