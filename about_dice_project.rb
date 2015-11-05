@@ -45,7 +45,7 @@ class AboutDiceProject < Neo::Koan
 
     # THINK ABOUT IT:
     #
-    # If the rolls are random, then it is possible (although not
+    # If the rolls are random, then it is possible (although notg
     # likely) that two consecutive rolls are equal.  What would be a
     # better way to test this?
   end
